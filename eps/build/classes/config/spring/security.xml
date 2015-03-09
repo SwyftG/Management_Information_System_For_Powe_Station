@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sec="http://www.springframework.org/schema/security"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+		http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-3.1.xsd">
+
+  	<sec:http pattern="/login.jsp*" security="none" />
+  	
+  	<sec:http auto-config="true">
+  		<sec:form-login login-page="/login.jsp" 
+  			authentication-success-handler-ref="epsAuthenticationSuccessHandler" />
+  			
+  		<sec:logout logout-success-url="/login.jsp" />
+  		
+  		<sec:intercept-url pattern="/" access="ROLE_EVERYONE" />
+  		<sec:intercept-url pattern="/*.jsp" access="ROLE_EVERYONE" />
+  		<sec:intercept-url pattern="/jsp/**" access="ROLE_EVERYONE" />
+  		<sec:intercept-url pattern="/*.action" access="ROLE_EVERYONE" />
+  		
+  		<sec:session-management invalid-session-url="/login.jsp">
+  			<sec:concurrency-control max-sessions="1" error-if-maximum-exceeded="true" />
+  		</sec:session-management>
+  	</sec:http>
+  	
+  	<sec:authentication-manager>
+  		<sec:authentication-provider user-service-ref="epsUserDetailsService">
+  			<sec:password-encoder hash="md5" />
+  		</sec:authentication-provider>
+  	</sec:authentication-manager>
+  	
+  	<bean id="epsUserDetailsService" class="org.eps.common.security.EpsUserDetailsService" />
+
+	<bean id="epsAuthenticationSuccessHandler" class="org.eps.common.security.EpsAuthenticationSuccessHandler">
+		<property name="targetUrl" value="/index.jsp" />
+	</bean>
+	
+</beans>

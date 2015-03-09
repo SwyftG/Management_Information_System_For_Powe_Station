@@ -1,0 +1,116 @@
+/*表格基本样式*/
+.table {
+    border-collapse: collapse;
+    border-top: 1px #DDDDDD solid;
+    border-left: 1px #DDDDDD solid;
+}
+
+/*单元格基本样式*/
+td {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    color: #323232;
+}
+
+.td_title {
+    background-color: #FFFFFF;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    color: #555555;
+    font-weight: bold;
+    padding: 4px;
+    border-collapse: collapse;
+    border-top: 0px solid;
+    border-right: 0px solid;
+    border-bottom: 0px solid;
+    border-left: 0px solid;
+}
+
+.td_required {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    color: #134EA1;
+    background-color: #F3F3F3;
+    padding: 2px;
+    border-right: 1px #DDDDDD solid;
+    border-bottom: 1px #DDDDDD solid;
+    height: 22px;
+}
+
+/*列表表头*/
+.td_header {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    color: #333333;
+    background-color: #F3F3F3;
+    padding: 2px;
+    border-right: 1px #DDDDDD solid;
+    border-bottom: 1px #DDDDDD solid;
+    height: 22px;
+    font-weight: bolder;
+    text-align: center;
+}
+
+/*列表表体*/
+.td_body {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    color: #333333;
+    background-color: #FFFFFF;
+    padding: 2px;
+    border-right: 1px #DDDDDD solid;
+    border-bottom: 1px #DDDDDD solid;
+    height: 22px;
+}
+
+/*编辑页面标签样式*/
+.td_lable {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    color: #333333;
+    background-color: #EFEFEF;
+	vertical-align:middle;
+    padding: 2px;
+    border-right: 1px #DDDDDD solid;
+    border-bottom: 1px #DDDDDD solid;
+}
+
+/*编辑页面输入部分样式*/
+.td_edit {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    color: #333333;
+    background-color: #FFFFFF;
+	vertical-align:middle;
+    padding: 2px;
+    border-right: 1px #DDDDDD solid;
+    border-bottom: 1px #DDDDDD solid;
+    height: 22px;
+}
+
+.page_banner {
+    background-color: #EFEFEF;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    color: #333333;
+    padding: 4px;
+    border-collapse: collapse;
+    border-top: 0px solid;
+    border-right: 0px solid;
+    border-bottom: 1px #CCCCCC solid;
+    border-left: 0px solid;
+    height: 25px;
+}
+
+.td05{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	FONT-SIZE: 12px;
+	color:#A27A39;
+	font-weight:bold;
+	padding: 4px;
+	border-collapse:collapse;
+	border-top: 0px none;
+	border-right: 0px none;
+	border-bottom: 1px dotted #999999;
+	border-left: 0px none;
+}
